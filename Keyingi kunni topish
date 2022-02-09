@@ -27,5 +27,6 @@ else:
         m += 1
     if m > 12:
         m = 1
+        y += 1
     
 print("keyingi kun:", d,m,sep="/")
