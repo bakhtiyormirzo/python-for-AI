@@ -1,91 +1,31 @@
 # 9-savol: keyingi kunni topish
 
-d = int(input("day (1-31): "))
-m = float(input("month (1-12): "))
+d = int(input("d = "))
+m = int(input("m = "))
+y = int(input("y = "))
 
-if m == 1 and d >= 1 and d <= 31:
-    d += 1
-    if d > 31:
-        d = 1
-        m += 1
-    else:
-        print(d, "- yanvar")
-elif m == 2 and d >= 1 and d <= 28:
-    d += 1
-    if d > 28:
-        d = 1
-        m += 1
-    else:
-        print(d, "- fevral")
-elif m == 3 and d >= 1 and d <= 31:
-    d += 1
-    if d > 31:
-        d = 1
-        m += 1
-    else:
-        print(d, "- mart")
-elif m == 4 and d >= 1 and d <= 30:
-    d += 1
+kabisa = False
+
+if x % 4 == 0:
+    kabisa = True
+if x % 100 == 0 and x % 400 != 0:
+    kabisa = False
+
+d += 1
+
+if m == 4 or m == 6 or m == 9 or m == 11:
     if d > 30:
         d = 1
         m += 1
-    else:
-        print(d, "- aprel")
-elif m == 5 and d >= 1 and d <= 31:
-    d += 1
-    if d > 31:
+elif m == 2:
+    if d > 29:
         d = 1
-        m += 1
-    else:
-        print(d, "- may")
-elif m == 6 and d >= 1 and d <= 30:
-    d += 1
-    if d > 30:
-        d = 1
-        m += 1
-    else:
-        print(d, "- iyun")
-elif m == 7 and d >= 1 and d <= 31:
-    d += 1
-    if d > 31:
-        d = 1
-        m += 1
-    else:
-        print(d, "- iyul")
-elif m == 8 and d >= 1 and d <= 31:
-    d += 1
-    if d > 31:
-        d = 1
-        m += 1
-    else:
-        print(d, "- avgust")
-elif m == 9 and d >= 1 and d <= 30:
-    d += 1
-    if d > 31:
-        d = 1
-        m += 1
-    else:
-        print(d, "- sentabr")
-elif m == 10 and d >= 1 and d <= 31:
-    d += 1
-    if d > 31:
-        d = 1
-        m += 1
-    else:
-        print(d, "- oktabr")
-elif m == 11 and d >= 1 and d <= 30:
-    d += 1
-    if d > 30:
-        d = 1
-        m += 1
-    else:
-        print(d, "- noyabr")
-elif m == 12 and d >= 1 and d <= 31:
-    d += 1
-    if d > 31:
-        d = 1
-        print(d, "- yanvar")
-    else:
-        print(d, "- dekabr")
+        m = 3
 else:
-    print("Xato")
+    if d > 31:
+        d = 1
+        m += 1
+    if m > 12:
+        m = 1
+    
+print("keyingi kun:", d,m,sep="/")
