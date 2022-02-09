@@ -433,6 +433,6 @@ def avto2():
 
 # print(avto2())
 
-# 38-savol
+
 
    
